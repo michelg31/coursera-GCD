@@ -122,6 +122,6 @@ run_analysis <- function(){
       tidyset<- tidyset[!is.nan(as.numeric(tidyset[,3])),]
       
       message("Saving tidy data set to 'measurements_mean.txt' and sending View() commande to R")
-      write.table(tidyset, file="measurements_mean.txt", quote=FALSE)
+      write.table(tidyset, file="measurements_mean.txt", quote=FALSE,row.names = FALSE)
       View(tidyset)
 }
